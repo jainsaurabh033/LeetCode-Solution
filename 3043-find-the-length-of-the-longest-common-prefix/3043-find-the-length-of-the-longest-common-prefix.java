@@ -8,7 +8,7 @@ class Solution {
         }
 
         Set<String> st = new HashSet<>();
-        StringBuilder temp = new StringBuilder();
+        StringBuilder temp = new StringBuilder(10);
 
         for(int i = 0;i<n;i++){
             String s = Integer.toString(arr1[i]);
