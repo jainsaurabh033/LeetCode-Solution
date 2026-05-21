@@ -1,5 +1,5 @@
 class Solution {
-    long BASE = 911382323L;
+    long BASE = 10;
     long MOD = 1000000007L;
     public int smallestUniqueSubarray(int[] nums) {
         int n = nums.length;
