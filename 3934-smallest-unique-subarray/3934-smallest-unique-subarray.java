@@ -1,6 +1,7 @@
 class Solution {
     long BASE = 10;
     long MOD = 100000007;
+
     public int smallestUniqueSubarray(int[] nums) {
         int n = nums.length;
 
@@ -8,9 +9,10 @@ class Solution {
         long[] hash = new long[n+1];
 
         pow[0] = 1;
+
         for(int i = 1;i<=n;i++){
             pow[i] = (pow[i-1] * BASE) % MOD;
-        }
+        }    
 
         for(int i = 0;i<n;i++){
             hash[i+1] = (hash[i] * BASE + nums[i]) % MOD;
@@ -18,7 +20,6 @@ class Solution {
 
         int low = 1;
         int high = n;
-
         int ans = n;
 
         while(low <= high){
@@ -38,18 +39,17 @@ class Solution {
 
     private boolean check(int[] nums, int len, long[] hash, long[] pow){
         int n = nums.length;
-
-        Map<Long, Integer> freq = new HashMap<>();
+        Map<Long,Integer> map = new HashMap<>();
 
         for(int i = 0;i+len<=n;i++){
             int l = i;
-            int r = i + len - 1;
+            int r = i+len-1;
 
             long currentHash = getHash(l,r,hash,pow);
-            freq.put(currentHash, freq.getOrDefault(currentHash,0) + 1);
+            map.put(currentHash, map.getOrDefault(currentHash,0) + 1);
         }
 
-        for(int count : freq.values()){
+        for(int count : map.values()){
             if(count == 1){
                 return true;
             }
