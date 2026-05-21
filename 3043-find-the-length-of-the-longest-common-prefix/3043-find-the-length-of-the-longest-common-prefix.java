@@ -26,7 +26,7 @@ class Solution {
             for(int j = 0;j<s.length();j++){
                 temp.append(s.charAt(j));
                 
-                if(st.contains(temp.toString()) == true){
+                if(st.contains(temp.toString())){
                     ans = Math.max(ans, temp.length());
                 }
             }
