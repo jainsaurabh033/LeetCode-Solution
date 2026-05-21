@@ -13,8 +13,13 @@ class Solution {
         }
 
         for(int i = 0;i<n;i++){
-            hash[i+1] = (hash[i] * BASE + nums[i] + 1) % MOD;
+            hash[i+1] = (hash[i] * BASE + nums[i]) % MOD;
         }
+
+        for(int i = 0;i<=n;i++){
+            System.out.print(hash[i] + " ");
+        }
+        System.out.println();
 
         int low = 1;
         int high = n;
@@ -41,23 +46,25 @@ class Solution {
 
         Map<Long, Integer> freq = new HashMap<>();
 
-        for(int i = 0;i+len <= n;i++){
+        for(int i = 0;i + len<=n;i++){
             int l = i;
             int r = i + len - 1;
 
-            long currentHash = getHash(l, r, hash, pow);
+            long currentHash = getHash(l,r,hash,pow);
 
             freq.put(currentHash, freq.getOrDefault(currentHash,0) + 1);
         }
 
         for(int count : freq.values()){
-            if(count == 1) return true;
+            if(count == 1){
+                return true;
+            }
         }
 
         return false;
     }
 
-    private long getHash(int l, int r, long[] hash, long[] pow){
+    private long getHash(int l, int r , long[] hash, long[] pow){
         long result = (hash[r+1] - (hash[l] * pow[r-l+1]) % MOD + MOD) % MOD;
 
         return result;
