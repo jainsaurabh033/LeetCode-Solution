@@ -6,10 +6,10 @@ class Solution {
 
         long[] pow = new long[n+1];
         long[] hash = new long[n+1];
-        
+
         pow[0] = 1;
         for(int i = 1;i<=n;i++){
-           pow[i] = (pow[i-1] * BASE) % MOD; 
+            pow[i] = (pow[i-1] * BASE) % MOD;
         }
 
         for(int i = 0;i<n;i++){
@@ -22,15 +22,15 @@ class Solution {
         int ans = n;
 
         while(low <= high){
-           int mid = low + (high - low) / 2;
+            int mid = low + (high - low) / 2;
 
-           if(check(nums, mid, hash, pow)){
-             ans = mid;
-             high = mid - 1;
-           }
-           else{
-            low = mid + 1;
-           }
+            if(check(nums, mid, hash, pow)){
+                ans = mid;
+                high = mid - 1;
+            }
+            else{
+                low = mid + 1;
+            }
         }
 
         return ans;
@@ -43,10 +43,9 @@ class Solution {
 
         for(int i = 0;i+len<=n;i++){
             int l = i;
-            int r = i+len-1;
+            int r = i + len - 1;
 
             long currentHash = getHash(l,r,hash,pow);
-
             freq.put(currentHash, freq.getOrDefault(currentHash,0) + 1);
         }
 
