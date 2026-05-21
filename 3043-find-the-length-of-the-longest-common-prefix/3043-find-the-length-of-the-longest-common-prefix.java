@@ -3,6 +3,10 @@ class Solution {
         int n = arr1.length;
         int m = arr2.length;
 
+        if(m < n){
+            return longestCommonPrefix(arr2, arr1);
+        }
+
         Set<String> st = new HashSet<>();
         StringBuilder temp = new StringBuilder();
 
