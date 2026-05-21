@@ -1,41 +1,39 @@
 class Solution {
     long BASE = 10;
-    long MOD = 100000007L;
-
+    long MOD = 100000007;
     public int smallestUniqueSubarray(int[] nums) {
-       int n = nums.length;
+        int n = nums.length;
 
-       long[] pow = new long[n+1];
-       long[] hash = new long[n+1];
+        long[] pow = new long[n+1];
+        long[] hash = new long[n+1];
+        
+        pow[0] = 1;
+        for(int i = 1;i<=n;i++){
+           pow[i] = (pow[i-1] * BASE) % MOD; 
+        }
 
-       pow[0] = 1;
+        for(int i = 0;i<n;i++){
+            hash[i+1] = (hash[i] * BASE + nums[i]) % MOD;
+        }
 
-       for(int i = 1;i<=n;i++){
-          pow[i] = (pow[i-1] * BASE) % MOD;
-       }    
+        int low = 1;
+        int high = n;
 
-       for(int i = 0;i<n;i++){
-          hash[i+1] = (hash[i] * BASE + nums[i]) % MOD;
-       }
+        int ans = n;
 
-       int low = 1;
-       int high = n;
+        while(low <= high){
+           int mid = low + (high - low) / 2;
 
-       int ans = n;
-
-       while(low <= high){
-         int mid = low + (high - low) / 2;
-
-         if(check(nums, mid, hash, pow)){
-            ans = mid;
-            high = mid - 1;
-         }
-         else{
+           if(check(nums, mid, hash, pow)){
+             ans = mid;
+             high = mid - 1;
+           }
+           else{
             low = mid + 1;
-         }
-       }
+           }
+        }
 
-       return ans;
+        return ans;
     }
 
     private boolean check(int[] nums, int len, long[] hash, long[] pow){
@@ -43,9 +41,9 @@ class Solution {
 
         Map<Long, Integer> freq = new HashMap<>();
 
-        for(int i = 0;i+len <= n;i++){
+        for(int i = 0;i+len<=n;i++){
             int l = i;
-            int r = i + len - 1;
+            int r = i+len-1;
 
             long currentHash = getHash(l,r,hash,pow);
 
