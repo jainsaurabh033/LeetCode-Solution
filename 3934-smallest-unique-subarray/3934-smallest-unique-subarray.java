@@ -5,47 +5,49 @@ class Solution {
     public int smallestUniqueSubarray(int[] nums) {
        int n = nums.length;
 
-       long[] pow = new long[n+1];
        long[] hash = new long[n+1];
+       long[] pow = new long[n+1];
+
        pow[0] = 1;
 
        for(int i = 1;i<=n;i++){
-         pow[i] = (pow[i-1] * BASE) % MOD;
+        pow[i] = (pow[i-1] * BASE) % MOD;
        }    
 
        for(int i = 0;i<n;i++){
-          hash[i+1] = (hash[i] * BASE + nums[i]) % MOD; 
+          hash[i+1] = (hash[i] * BASE + nums[i]) % MOD;
        }
 
        int low = 1;
        int high = n;
+
        int ans = n;
 
        while(low <= high){
-          int mid = low + (high - low) / 2;
+        int mid = low + (high - low) / 2;
 
-          if(check(nums,mid,pow,hash)){
+        if(check(mid,nums, hash, pow)){
             ans = mid;
             high = mid - 1;
-          }
-          else{
+        }
+        else{
             low = mid + 1;
-          }
+        }
        }
 
        return ans;
     }
 
-    private boolean check(int[] nums, int len, long[] pow, long[] hash){
+    private boolean check(int len, int[] nums, long[] hash, long[] pow){
         int n = nums.length;
 
-        Map<Long,Integer> map = new HashMap<>();
+        Map<Long, Integer> map = new HashMap<>();
 
         for(int i = 0;i+len<=n;i++){
             int l = i;
-            int r = i+len-1;
+            int r = i + len - 1;
 
-            long currentHash = getHash(l,r,hash,pow);
+            long currentHash = getHash(l,r,hash, pow);
 
             map.put(currentHash, map.getOrDefault(currentHash,0) + 1);
         }
@@ -60,7 +62,7 @@ class Solution {
     }
 
     private long getHash(int l, int r, long[] hash, long[] pow){
-        long result = (hash[r+1] - (hash[l] * pow[r-l+1]) % MOD + MOD) % MOD;
+        long result = (hash[r+1]  - (hash[l] * pow[r-l+1]) % MOD + MOD) % MOD;
         return result;
     }
 }
