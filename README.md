@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0033-search-in-rotated-sorted-array) |
 | [3934-smallest-unique-subarray](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/3934-smallest-unique-subarray) |
 ## Hash Table
 |  |
@@ -12,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search
 |  |
 | ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0033-search-in-rotated-sorted-array) |
 | [3934-smallest-unique-subarray](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/3934-smallest-unique-subarray) |
 ## Rolling Hash
 |  |
