@@ -1,5 +1,5 @@
 class Solution {
-    private static final int BASE = 31;
+    private static final int BASE = 10;
     private static final int MOD = 100000007;
 
     public int repeatedStringMatch(String a, String b) {
