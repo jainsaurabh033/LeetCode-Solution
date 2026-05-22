@@ -50,9 +50,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0686-repeated-string-match](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0686-repeated-string-match) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 ## Stack
 |  |
 | ------- |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0921-minimum-add-to-make-parentheses-valid) |
+## String Matching
+|  |
+| ------- |
+| [0686-repeated-string-match](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0686-repeated-string-match) |
 <!---LeetCode Topics End-->
