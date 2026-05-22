@@ -41,9 +41,18 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0921-minimum-add-to-make-parentheses-valid](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 | [3927-minimize-array-sum-using-divisible-replacements](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/3927-minimize-array-sum-using-divisible-replacements) |
 ## Number Theory
 |  |
 | ------- |
 | [3927-minimize-array-sum-using-divisible-replacements](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/3927-minimize-array-sum-using-divisible-replacements) |
+## String
+|  |
+| ------- |
+| [0921-minimum-add-to-make-parentheses-valid](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0921-minimum-add-to-make-parentheses-valid) |
+## Stack
+|  |
+| ------- |
+| [0921-minimum-add-to-make-parentheses-valid](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 <!---LeetCode Topics End-->
