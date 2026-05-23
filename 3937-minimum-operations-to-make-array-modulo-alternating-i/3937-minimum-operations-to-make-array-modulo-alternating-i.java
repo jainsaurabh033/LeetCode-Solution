@@ -4,8 +4,8 @@ class Solution {
 
         int ans = Integer.MAX_VALUE;
 
-        for(int x = 1;x<=k;x++){
-            for(int y = 1;y<=k;y++){
+        for(int x = 0;x<k;x++){
+            for(int y = 0;y<k;y++){
                 if(x == y) continue;
 
                 int count = 0;
