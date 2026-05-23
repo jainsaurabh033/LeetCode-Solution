@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/0033-search-in-rotated-sorted-array) |
+| [1752-check-if-array-is-sorted-and-rotated](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/1752-check-if-array-is-sorted-and-rotated) |
 | [3925-concatenate-array-with-reverse](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/3925-concatenate-array-with-reverse) |
 | [3927-minimize-array-sum-using-divisible-replacements](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/3927-minimize-array-sum-using-divisible-replacements) |
 | [3934-smallest-unique-subarray](https://github.com/jainsaurabh033/LeetCode-Solution/tree/master/3934-smallest-unique-subarray) |
