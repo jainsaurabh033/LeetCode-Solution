@@ -42,7 +42,7 @@ class Solution {
         return false;
     }
 
-    private boolean isNumber (char c){
+    private boolean isNumber(char c){
         if('0' <= c && c <= '9') return true;
 
         return false;
