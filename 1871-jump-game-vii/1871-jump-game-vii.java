@@ -4,9 +4,9 @@ class Solution {
 
         Queue<Integer> q = new LinkedList<>();
         boolean[] visited = new boolean[n+1];
-        visited[0] = true;
 
         q.offer(0);
+        visited[0] = true;
 
         int farthest = 0;
 
@@ -24,6 +24,7 @@ class Solution {
                     q.offer(i);
                 }
             }
+
             farthest = end;
         }
 
